@@ -49,9 +49,9 @@ module JSONAPI
       rels = (model_serializer.relationships_to_serialize || {}).keys
 
       if attrs.include?(error_key)
-        { pointer: "/data/attributes/#{error_key}" }
+        { pointer: "data/attributes/#{error_key}" }
       elsif rels.include?(error_key)
-        { pointer: "/data/relationships/#{error_key}" }
+        { pointer: "data/relationships/#{error_key}" }
       else
         { pointer: '' }
       end
