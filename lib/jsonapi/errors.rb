@@ -55,7 +55,7 @@ module JSONAPI
       source = { pointer: '' }
 
       if !%w{data attributes relationships}.include?(exception.param.to_s)
-        source[:pointer] = "/data/attributes/#{exception.param}"
+        source[:pointer] = "data/attributes/#{exception.param}"
       end
 
       error = {
